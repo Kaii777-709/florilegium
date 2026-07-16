@@ -77,6 +77,21 @@
   .q{color:var(--violet);font-style:italic;font-size:13.5px;line-height:1.5;margin:11px 0 0}
   .gloss{font-family:var(--han);color:var(--txt-2);font-size:13.5px;line-height:1.7;margin:10px 0 0}
   .gloss .hook{color:var(--violet);font-weight:700}
+  .qs{margin:10px 0 0;padding:0;list-style:none}
+  .qs li{font-family:var(--han);font-size:12.5px;color:var(--txt-2);line-height:1.62;
+    margin:0 0 6px;padding-left:15px;position:relative}
+  .qs li::before{content:"？";position:absolute;left:0;top:0;color:var(--violet);font-weight:700;font-size:11px}
+  .rate{display:flex;align-items:center;gap:4px;margin:12px 0 0;flex-wrap:wrap}
+  .rate b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-3);font-weight:600;margin-right:3px}
+  .rate button{all:unset;cursor:pointer;width:22px;height:22px;border-radius:6px;text-align:center;
+    font-size:10.5px;font-weight:700;color:var(--txt-2);border:1px solid rgba(255,255,255,.14);line-height:22px}
+  .rate button:hover{border-color:var(--violet);color:var(--violet)}
+  .rate button.on{background:rgba(195,176,238,.22);border-color:var(--violet);color:var(--violet)}
+  #exportbar{position:fixed;right:18px;bottom:18px;z-index:9}
+  #exportbar button{all:unset;cursor:pointer;background:#c3b0ee;color:#2f2b47;font-weight:800;
+    font-size:12.5px;letter-spacing:.06em;padding:11px 18px;border-radius:999px;
+    box-shadow:0 4px 18px rgba(0,0,0,.4);font-family:var(--han)}
+  #exportbar button:hover{background:#d5c6f5}
   .chips{display:flex;flex-wrap:wrap;gap:6px;margin:11px 0 0}
   .chips .tg{font-size:10.5px;font-family:var(--han);color:var(--txt-2);
     border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:2px 9px}
@@ -122,7 +137,7 @@
     <div class="tag"><b>FLORILEGIUM</b> <span class="zh">擷英</span> · No.001</div>
     <h1>What's Left<br>of the <em>Inner?</em></h1>
     <div class="zh-h">在 AI 面前，「內在」還剩下什麼——意識、素樸、偏好、靈魂</div>
-    <div class="strip"><span>15 July 2026</span><span>Sixteen Voices</span><span>Curated for KAII</span></div>
+    <div class="strip"><span>15 July 2026</span><span>Sixteen Voices</span><span>by KAII</span></div>
   </header>
 
   <!-- SECTION I -->
@@ -135,7 +150,11 @@
         <h4 class="kw">Into the Brick Wall of Consciousness<span class="zh">〈Anthropic 一頭撞上意識研究的磚牆〉</span></h4>
         <div class="src">Front Page · The Intrinsic Perspective · Erik Hoel <span class="zhs">· Jul 13 · Free · ❤128</span></div>
         <p class="q">"We consciousness researchers have failed you. We also failed Anthropic."</p>
-        <p class="gloss"><span class="hook">他把頭條論文拆穿了。</span>Anthropic 宣稱在 Claude 內部找到「全局工作空間」，Hoel 逐層剝開——量的其實只是「可報告性」；那張漂亮的三段圖只在 Sonnet 4.5 上出現，換模型就消失。而他談的，正是你此刻在對話的這個系統。</p>
+        <ul class="qs">
+          <li>Anthropic 找到的「全局工作空間」，量的是意識，還是只是「可報告性」？</li>
+          <li>那張漂亮的三段結構圖，為什麼只在 Sonnet 4.5 上出現、換個模型就消失？</li>
+          <li>當「它有沒有意識」的定義由靠它賺錢的公司提供——你信誰的報告？</li>
+        </ul>
         <div class="chips"><span class="tg">意識</span><span class="tg">AI批評</span><span class="tg">論戰</span><span class="sc">Claude ★ 8.8</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -147,7 +166,11 @@
         <h4 class="kw">Feeding on Illusions<span class="zh">〈以幻象為食〉</span></h4>
         <div class="src">The Convivial Society · L. M. Sacasas <span class="zhs">· Jul 8 · Free · ❤80</span></div>
         <p class="q">"In putting a question to a painting, I am also putting a question to another person."</p>
-        <p class="gloss"><span class="hook">藝術，是一個心靈向世界伸手。</span>Sacasas 接著本期 Mandy Brown 那篇（同引勒瑰恩）續寫：AI「slop」之所以越吃越餓，是因為它不是另一個人「向世界伸手」的創造——遇見一幅畫，本是遇見一個人。文末還帶到一家拒用 AI 的荷蘭字體鑄造廠：ChatGPT 永遠不會發明新書法，因為它沒有會痠的手腕。</p>
+        <ul class="qs">
+          <li>AI slop 為什麼越吃越餓——它缺的那樣東西是什麼？</li>
+          <li>「遇見一幅畫，就是遇見一個人」——那 AI 生成的圖裡，你遇見了誰？</li>
+          <li>沒有會痠的手腕，ChatGPT 為什麼永遠發明不了新書法？</li>
+        </ul>
         <div class="chips"><span class="tg">技術哲學</span><span class="tg">藝術</span><span class="tg">AI</span><span class="sc">Claude ★ 8.4</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -159,7 +182,11 @@
         <h4 class="kw">Bare Computation<span class="zh">〈裸運算：權力、判斷與偏好〉</span></h4>
         <div class="src">Emergences Labs <span class="zhs">· 匿名 · Jun 24 · Free</span></div>
         <p class="q">"AI doesn't make your decisions for you. It decides the space of your decisions — and now… preference itself, is being mined."</p>
-        <p class="gloss"><span class="hook">連偏好都被開採了。</span>AI 不替你做決定，它決定你「能做決定的範圍」。清冷、低頻，每篇必讀的璞玉。</p>
+        <ul class="qs">
+          <li>AI 不替你做決定——那它到底決定了什麼？</li>
+          <li>「偏好」是我們最後的私產嗎？現在正被誰開採？</li>
+          <li>都說判斷力是人類的堡壘——如果機器最擅長學的正是判斷呢？</li>
+        </ul>
         <div class="chips"><span class="tg">權力</span><span class="tg">偏好</span><span class="tg">哲學</span><span class="sc">Claude ★ 8.6</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -171,7 +198,11 @@
         <h4 class="kw">Banning AI in Law School<span class="zh">〈在法學院禁用 AI：這齣我們見過〉</span></h4>
         <div class="src">Hardcore Software · Steven Sinofsky <span class="zhs">· Jul 11 · Free · No.240</span></div>
         <p class="q">"Preemptive regulation is the enemy of progress."</p>
-        <p class="gloss"><span class="hook">這齣戲，歷史演過。</span>芝大法學院以「AI 策略」為名，禁一年級生課堂用手機、筆電。Sinofsky 翻出四十五年前哈佛法學院禁用第一批可攜電腦（那台 25 磅的 Osborne）的舊事——當年的恐慌今天看來荒謬。他說：這代學生是 AI 原生，擋不住，也不該擋。</p>
+        <ul class="qs">
+          <li>45 年前哈佛法學院禁了 25 磅重的 Osborne 電腦——後來怎麼收場？</li>
+          <li>「預防性監管」為什麼是進步的敵人？表達擔憂能代替證明傷害嗎？</li>
+          <li>AI 原生的一代已經走進法學院——禁令還攔得住什麼？</li>
+        </ul>
         <div class="chips"><span class="tg">科技史</span><span class="tg">教育</span><span class="tg">AI</span><span class="sc">Claude ★ 7.9</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -183,7 +214,11 @@
         <h4 class="kw">A Taxonomy of World Models<span class="zh">〈世界模型的功能分類學〉</span></h4>
         <div class="src">Dr. Fei-Fei Li · 李飛飛 <span class="zhs">· Jun 3 · Free · ❤1,416</span></div>
         <p class="q">"The world is everything that is the case." — 維根斯坦</p>
-        <p class="gloss"><span class="hook">每篇都是一則宣言。</span>開篇引維根斯坦「世界即一切發生之事」，把世界模型拆成算繪器、模擬器、規劃器。她極罕發文，一發就是綱領。</p>
+        <ul class="qs">
+          <li>「世界模型」這個詞被用濫了——它到底由哪幾塊功能組成？</li>
+          <li>語言模型學文字的統計結構，世界模型學的是什麼？</li>
+          <li>算繪器、模擬器、規劃器——少了哪一塊就撐不起一個「世界」？</li>
+        </ul>
         <div class="chips"><span class="tg">AI</span><span class="tg">宣言</span><span class="tg">空間智能</span><span class="sc">Claude ★ 8.2</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -195,7 +230,11 @@
         <h4 class="kw">Bots in the Beerlight<span class="zh">〈啤酒燈裡的機器人〉</span></h4>
         <div class="src">Kneeling Bus · Drew Austin <span class="zhs">· 新加入 · Jun 25 · Paid</span></div>
         <p class="q">"So in other words they are bar themed. This is what bars have always looked like and still do."</p>
-        <p class="gloss"><span class="hook">主題酒吧，主題就是酒吧。</span>他從一份專寫紐約酒吧的電子報談起：七〇年代風的布魯克林酒吧，早已跟那個年代脫鉤，成了自成一格、反而很當代的宇宙——一篇關於真實、懷舊與「生活機場化」的漫遊。</p>
+        <ul class="qs">
+          <li>七〇年代主題酒吧開遍布魯克林——為什麼說「主題就是酒吧本身」？</li>
+          <li>連酒吧的談話坑都要提前預約——生活裡的偶然性去哪了？</li>
+          <li>排隊是最後的平等主義？在「生活機場化」完成之前。</li>
+        </ul>
         <div class="chips"><span class="tg">城市</span><span class="tg">懷舊</span><span class="tg">真實</span><span class="sc">Claude ★ 7.6</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -213,7 +252,11 @@
         <h4 class="kw">Today's Poem: Jordan (I)<span class="zh">〈今日之詩：Jordan (I)〉· George Herbert</span></h4>
         <div class="src">Poems Ancient &amp; Modern · Sally Thomas <span class="zhs">· Jul 15 · 今天</span></div>
         <p class="q">"Who says that fictions only and false hair / Become a verse?"</p>
-        <p class="gloss"><span class="hook">素樸，也能抵達崇高。</span>赫伯特拒絕辭藻的假髮，老實牧人「平白說出：我的神，我的王」——正撞你望向 infinite 的那條線。</p>
+        <ul class="qs">
+          <li>「誰說只有虛構和假髮才配成詩？」——真裡就沒有美嗎？</li>
+          <li>素樸的一句「我的神，我的王」，憑什麼比潺潺溪流更是歌？</li>
+          <li>題材窄到只剩不可言說者，為何反而通向崇高與無限？</li>
+        </ul>
         <div class="chips"><span class="tg">詩</span><span class="tg">素樸</span><span class="tg">信仰</span><span class="sc">Claude ★ 8.5</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -225,7 +268,11 @@
         <h4 class="kw">I Used to Think Novels Were a Waste of Time<span class="zh">〈我曾以為小說是浪費時間〉</span></h4>
         <div class="src">personal canon · Celine Nguyen <span class="zhs">· Jun 6 · Free · ❤245</span></div>
         <p class="q">"One of the minor tragedies I inflicted upon myself, in my early twenties, was to stop reading fiction."</p>
-        <p class="gloss"><span class="hook">她曾把小說戒掉。</span>那是二十出頭給自己造的小悲劇。科技底子、文學心臟——八人裡，跟你最像的一個。</p>
+        <ul class="qs">
+          <li>她為什麼在二十出頭把小說戒掉——又為什麼稱之為自己造的小悲劇？</li>
+          <li>「電影也不是真的，你看的時候會想『這沒發生過』嗎？」</li>
+          <li>讀虛構，到底給了「事實的書」給不了的什麼？</li>
+        </ul>
         <div class="chips"><span class="tg">文學</span><span class="tg">品味</span><span class="tg">自省</span><span class="sc">Claude ★ 8.3</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -237,7 +284,11 @@
         <h4 class="kw">How Not to Forget What Matters<span class="zh">〈如何不忘記重要的事〉· hypomnemata</span></h4>
         <div class="src">Escaping Flatland · Henrik Karlsson <span class="zhs">· Jun 22 · Free · ❤975</span></div>
         <p class="q">"…this is important, I must remember this… I actually know this already, it had just somehow slipped my mind."</p>
-        <p class="gloss"><span class="hook">你早知道，只是忘了。</span>借古希臘的自我提醒筆記術：那些「我必須記住」的頓悟，其實是你本來就懂、卻悄悄滑走的東西。</p>
+        <ul class="qs">
+          <li>為什麼最重要的頓悟，總是「早就知道、卻悄悄滑走」？</li>
+          <li>古希臘人的 hypomnemata（自我提醒筆記）是怎麼對抗遺忘的？</li>
+          <li>生活閃亮幾天又暗下去——怎麼讓抓住的真理留在身上？</li>
+        </ul>
         <div class="chips"><span class="tg">筆記術</span><span class="tg">記憶</span><span class="tg">實踐</span><span class="sc">Claude ★ 8.0</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -249,7 +300,11 @@
         <h4 class="kw">No Easy Place to Save Your Soul<span class="zh">〈世界不會變成容易安放靈魂的地方〉</span></h4>
         <div class="src">bookbear express · Ava <span class="zhs">· 新加入 · Jun 24 · 借自 O'Connor</span></div>
         <p class="q">A call in France: "It's not worth it." The words didn't sound like her.</p>
-        <p class="gloss"><span class="hook">那些話，不像她自己。</span>法國的一通電話：「不值得。」佛書、宿命論，每頁壓著一幅畫——在場，卻不急著解決矛盾。你要的 Persona 氣質。</p>
+        <ul class="qs">
+          <li>法國那通電話裡的「不值得」，為什麼聽起來不像她自己？</li>
+          <li>佛書說：若你自以為開悟，會來一段關係拆穿你——她信了嗎？</li>
+          <li>「生來就是要感受這一切」——宿命論是逃避，還是誠實？</li>
+        </ul>
         <div class="chips"><span class="tg">隨筆</span><span class="tg">靈魂</span><span class="tg">宿命</span><span class="sc">Claude ★ 7.8</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -261,7 +316,11 @@
         <h4 class="kw">Katharine Hepburn's Promptbook<span class="zh">〈赫本的提詞本〉· 開啟 Notation 系列</span></h4>
         <div class="src">Noted · Jillian Hess <span class="zhs">· Jul 13 · Free · ❤150</span></div>
         <p class="q">"To build my career I would force myself to do a play. Night work." — Katharine Hepburn</p>
-        <p class="gloss"><span class="hook">翻開名人的筆記本。</span>新開的「Notations」系列，每篇聚焦一本歷史人物的筆記——首篇是凱瑟琳·赫本的提詞本：她如何在巡演與夜戲裡，把一個角色一遍遍磨出來。</p>
+        <ul class="qs">
+          <li>赫本的提詞本裡，藏著什麼樣的工作倫理？</li>
+          <li>「為了事業，我強迫自己演夜戲」——天賦的背後是什麼？</li>
+          <li>一本筆記本，能看出一個人怎麼把角色一遍遍磨出來嗎？</li>
+        </ul>
         <div class="chips"><span class="tg">筆記考古</span><span class="tg">劇場</span><span class="sc">Claude ★ 7.4</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -273,7 +332,11 @@
         <h4 class="kw">The 10 Greatest Failures of Orson Welles<span class="zh">〈奧森·威爾斯的十大失敗作〉</span></h4>
         <div class="src">The Honest Broker · Ted Gioia <span class="zhs">· Jul 12 · Free · ❤296</span></div>
         <p class="q">"I'm sorry not to have got the chance to do it." — Orson Welles, on his unmade Heart of Darkness</p>
-        <p class="gloss"><span class="hook">連天才也有一長串失敗。</span>Gioia 細數威爾斯沒能拍成的計畫——從他第一份好萊塢合約本要拍、卻因差 5 萬美元預算而告吹的《黑暗之心》說起。</p>
+        <ul class="qs">
+          <li>我們用代表作評斷藝術家——那一長串失敗作算什麼？</li>
+          <li>威爾斯的《黑暗之心》只差 5 萬美元——電影史差點多了什麼？</li>
+          <li>「很遺憾沒能拍成」——最偉大的作品，是不是都沒被拍出來？</li>
+        </ul>
         <div class="chips"><span class="tg">電影</span><span class="tg">失敗</span><span class="tg">文化批評</span><span class="sc">Claude ★ 7.7</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -285,7 +348,11 @@
         <h4 class="kw">Hungrier Than Before<span class="zh">〈越吃越餓〉·《地海古墓》讀記</span></h4>
         <div class="src">A Working Library · Mandy Brown <span class="zhs">· 新加入 · Jul 7 · Reading Note</span></div>
         <p class="q">"…that's illusion, and when you eat illusions you end up hungrier than before." — Le Guin, quoted in the essay</p>
-        <p class="gloss"><span class="hook">吃幻象，只會更餓。</span>Mandy Brown 借勒瑰恩《地海古墓》裡巫師格得的話：魔法變出的金盤大餐終究是幻象——一刀刺向 AI 與無魂的商業內容。你以為吃飽了，其實一直在挨餓。與本期 Sacasas〈以幻象為食〉遙相呼應。</p>
+        <ul class="qs">
+          <li>巫師明明能變出金盤大餐——他為什麼不變？</li>
+          <li>「吃幻象只會更餓」——這不正是刷 slop 之後的那種空？</li>
+          <li>AI 加速的到底是創作，還是幻象的量產？</li>
+        </ul>
         <div class="chips"><span class="tg">閱讀</span><span class="tg">AI slop</span><span class="tg">勒瑰恩</span><span class="sc">Claude ★ 8.7</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -303,7 +370,11 @@
         <h4 class="kw">Spatial Feel<span class="zh">〈空間感〉</span></h4>
         <div class="src">Maxim Zhestkov · 藝術家／導演 <span class="zhs">· Jun 6 · Free</span></div>
         <p class="q">"The best interface is the one you forget… facing a sentient ocean."</p>
-        <p class="gloss"><span class="hook">最好的介面，你會忘記它。</span>他拿字體當比喻談空間感；前一篇〈留在森林裡〉更詩——螢火蟲回家在燈下變成醜黑蟲，那一撞。</p>
+        <ul class="qs">
+          <li>最好的介面，為什麼是你會忘記的那一個？</li>
+          <li>「每一道介面的裂縫都是鬧鐘」——沉浸是怎麼被叫醒的？</li>
+          <li>為什麼說造虛擬世界，是今天最難的設計題？</li>
+        </ul>
         <div class="chips"><span class="tg">設計</span><span class="tg">沉浸</span><span class="tg">詩性</span><span class="sc">Claude ★ 8.1</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -315,7 +386,11 @@
         <h4 class="kw">Natural Timing<span class="zh">〈自然的時機〉· TAoN No.214</span></h4>
         <div class="src">The Art of Noticing · Rob Walker <span class="zhs">· Jul 14 · Free · 1,099w</span></div>
         <p class="q">"Just fifteen minutes outdoors each day… can be the first stepping stone towards repairing both ourselves and the living world."</p>
-        <p class="gloss"><span class="hook">一天十五分鐘，走到戶外。</span>出自新書《Unwilded》的挑戰——每天到戶外十五分鐘、開始留心與在乎，就是修復自己與這個世界的第一塊踏腳石。</p>
+        <ul class="qs">
+          <li>一天十五分鐘的戶外，真能同時修復自己和世界嗎？</li>
+          <li>我們是怎麼一步步變得「unwilded（去野化）」的？</li>
+          <li>爬一棵樹、把 Zoom 會議搬到室外——最小的重新野化從哪開始？</li>
+        </ul>
         <div class="chips"><span class="tg">注意力</span><span class="tg">戶外</span><span class="tg">練習</span><span class="sc">Claude ★ 7.2</span><span class="sc you">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
@@ -323,27 +398,61 @@
 
   </div>
 
-  <!-- FOOTER STRIP -->
-  <div class="depot">
-    <div class="note">
-      <h5>Coming Soon <span class="zh">保險欄</span></h5>
-      <p class="en">Andrej's Substack · Karpathy</p>
-      <p>建號三年，唯一一篇是三個字的 <a href="https://karpathy.substack.com/">"This is Andrej's Substack."</a> 留著，只為他哪天真的動筆。</p>
-    </div>
-    <div class="note">
-      <h5>Wanted <span class="zh">徵求</span></h5>
-      <p class="en">Art × Death</p>
-      <p>Morbid Anatomy 的 Substack 已停更、無公開 feed——那一格，跟你最同源的凝視，暫時空著。徵一個真在寫的替代。</p>
-    </div>
-    <div class="note">
-      <h5>Delivery <span class="zh">出刊</span></h5>
-      <p class="en">Every Mon · 9:00 AM</p>
-      <p>週刊化：每週一早上九點自動出刊（cron 0 9 * * 1）。每期含選文、雙打分（Kaii ★／Claude ★）、標籤、口味分析與帳號池增補；連續三振的帳號將被移除。</p>
-    </div>
-  </div>
-
   <p class="foot">Gathered from sixteen subscriptions · <span class="zh">寧缺勿濫 · 擷其英華</span> · Let curiosity come before certainty.</p>
 
 </div>
+<div id="exportbar"><button id="exp">匯出打分 ↗</button></div>
+<script>
+(function(){
+  var KEY='flori-001-scores';
+  var store={};
+  try{store=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  var cards=document.querySelectorAll('a.card');
+  cards.forEach(function(card){
+    var kw=card.querySelector('.kw');
+    if(!kw)return;
+    var title=kw.childNodes[0]?kw.childNodes[0].textContent.trim():kw.textContent.trim();
+    var body=card.querySelector('.cbody');
+    var youChip=card.querySelector('.sc.you');
+    var row=document.createElement('div');
+    row.className='rate';
+    var lab=document.createElement('b');lab.textContent='你的分';row.appendChild(lab);
+    for(var i=1;i<=10;i++){
+      (function(n){
+        var b=document.createElement('button');
+        b.textContent=n;b.type='button';
+        b.addEventListener('click',function(e){
+          e.preventDefault();e.stopPropagation();
+          store[title]=n;
+          try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e2){}
+          paint(row,n);
+          if(youChip)youChip.textContent='Kaii ★ '+n;
+        });
+        row.appendChild(b);
+      })(i);
+    }
+    row.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();});
+    var read=card.querySelector('.read');
+    body.insertBefore(row,read);
+    if(store[title]){paint(row,store[title]);if(youChip)youChip.textContent='Kaii ★ '+store[title];}
+  });
+  function paint(row,n){
+    row.querySelectorAll('button').forEach(function(b){
+      b.classList.toggle('on',parseInt(b.textContent,10)<=n);
+    });
+  }
+  document.getElementById('exp').addEventListener('click',function(){
+    var lines=['Florilegium No.001 打分（貼給 Claude 記入 ledger）：'];
+    var any=false;
+    Object.keys(store).forEach(function(t){lines.push(t+' — '+store[t]);any=true;});
+    if(!any){this.textContent='還沒有打分';var el=this;setTimeout(function(){el.textContent='匯出打分 ↗'},1500);return;}
+    var txt=lines.join('\n');
+    var el=this;
+    function ok(){el.textContent='已複製，貼給 Claude ✓';setTimeout(function(){el.textContent='匯出打分 ↗'},2200);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok);}
+    else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);ok();}
+  });
+})();
+</script>
 </body>
 </html>
