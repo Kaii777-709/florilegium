@@ -6,14 +6,15 @@
 <title>LUNARIA · 月之反射 · No.001 · 2026-07-15</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&family=LXGW+WenKai+TC:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --txt:#eeecf6; --txt-2:rgba(238,236,246,.66); --txt-3:rgba(238,236,246,.42);
     --violet:#c3b0ee; --glass:rgba(248,247,253,.06); --glass-edge:rgba(255,255,255,.13);
-    --serif:"Avenir Next","Avenir","Nunito Sans",-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
-    --display:"Avenir Next","Avenir","Nunito Sans",-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
-    --han:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    --serif:"Avenir Next","Avenir",-apple-system,"Segoe UI","LXGW WenKai TC",sans-serif;
+    --display:"Pixelify Sans","Avenir Next",-apple-system,sans-serif;
+    --pixel:"Silkscreen","Pixelify Sans",monospace;
+    --han:"LXGW WenKai TC","PingFang TC","Microsoft JhengHei",sans-serif;
   }
   *{box-sizing:border-box}
   body{margin:0;min-height:100vh;color:var(--txt);font-family:var(--serif);line-height:1.55;
@@ -24,21 +25,21 @@
 
   /* masthead — Brutalist statement: focal = the question, no boxes */
   .mast{padding:8px 0 32px;margin-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
-  .mast .tag{font-family:var(--serif);font-size:12px;font-weight:600;letter-spacing:.16em;
+  .mast .tag{font-family:var(--pixel);font-size:11px;font-weight:400;letter-spacing:.16em;
     text-transform:uppercase;color:var(--txt-2);margin-bottom:24px}
   .mast .tag b{color:var(--txt);font-weight:800;letter-spacing:.12em}
   .mast .tag .zh{font-family:var(--han);font-weight:500;letter-spacing:.06em;font-size:1.2em}
   .mast h1{font-family:var(--display);font-weight:800;margin:0;line-height:.92;
-    font-size:clamp(42px,8.4vw,96px);letter-spacing:-.02em;text-transform:uppercase;
+    font-size:clamp(38px,7.6vw,84px);letter-spacing:0;text-transform:uppercase;
     background:linear-gradient(168deg,#f2effb 0%,#cfc4ec 55%,#a99ad8 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent}
   .mast h1 em{font-style:normal;background:linear-gradient(100deg,#c3b0ee 0%,#e8ddff 42%,#9f86e0 60%,#c3b0ee 100%);
     background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
     animation:moonsheen 9s ease-in-out infinite}
   @keyframes moonsheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
-  .mast .zh-h{font-family:var(--han);font-weight:500;font-size:clamp(20px,3.1vw,30px);
+  .mast .zh-h{font-family:var(--han);font-weight:700;font-size:clamp(20px,3.1vw,30px);
     color:var(--txt);margin:20px 0 0;letter-spacing:.02em;line-height:1.5}
-  .mast .strip{margin-top:26px;font-family:var(--serif);font-size:11.5px;font-weight:600;
+  .mast .strip{margin-top:26px;font-family:var(--pixel);font-size:11px;font-weight:400;
     letter-spacing:.14em;text-transform:uppercase;color:var(--txt-3);display:flex;gap:24px;flex-wrap:wrap}
 
   .mast .tag,.mast h1,.mast .zh-h,.mast .strip{opacity:0;transform:translateY(14px);
@@ -47,7 +48,7 @@
   @keyframes rise{to{opacity:1;transform:none}}
   /* section label */
   .sec{display:flex;align-items:center;gap:14px;margin:42px 4px 20px}
-  .sec span{font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
+  .sec span{font-family:var(--pixel);font-size:12px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
   .sec span .zh{font-family:var(--han);font-weight:700;letter-spacing:.12em;color:var(--violet);margin-left:8px;font-size:1.05em}
   .sec::after{content:"";height:1px;flex:1;background:rgba(255,255,255,.12)}
 
@@ -72,14 +73,14 @@
     line-height:1.28;color:var(--txt);letter-spacing:-.01em}
   .cbody{padding:15px 17px 17px;display:flex;flex-direction:column;flex:1}
   .kw{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.14;margin:0}
-  .kw .zh{font-family:var(--han);font-weight:500;font-size:15.5px;color:var(--txt);display:block;margin-top:4px;line-height:1.45}
-  .src{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--txt-3);margin:9px 0 0}
+  .kw .zh{font-family:var(--han);font-weight:700;font-size:16px;color:var(--txt);display:block;margin-top:4px;line-height:1.45}
+  .src{font-family:var(--pixel);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt-3);margin:9px 0 0}
   .src .zhs{font-family:var(--han);letter-spacing:.05em}
   .q{color:var(--violet);font-style:italic;font-size:13.5px;line-height:1.5;margin:11px 0 0}
-  .gloss{font-family:var(--han);color:var(--txt-2);font-size:13.5px;line-height:1.7;margin:10px 0 0}
+  .gloss{font-family:var(--han);color:var(--txt-2);font-size:14px;line-height:1.7;margin:10px 0 0}
   .gloss .hook{color:var(--violet);font-weight:700}
   .qs{margin:10px 0 0;padding:0;list-style:none}
-  .qs li{font-family:var(--han);font-size:12.5px;color:var(--txt-2);line-height:1.62;
+  .qs li{font-family:var(--han);font-size:13.5px;color:var(--txt-2);line-height:1.62;
     margin:0 0 7px;padding-left:17px;position:relative}
   .qs li::before{content:"";position:absolute;left:1px;border-radius:50%}
   .qs li::before{transition:transform .3s ease}
@@ -97,7 +98,7 @@
     border-top:1px solid rgba(255,255,255,.09);font-family:var(--serif);font-size:11.5px;font-weight:700;letter-spacing:.04em}
   .scores .claude{color:var(--violet)}
   .scores .kaii{color:var(--txt-3)}
-  .read{margin-top:15px;font-family:var(--display);font-size:12.5px;font-weight:800;letter-spacing:.08em;
+  .read{margin-top:15px;font-family:var(--pixel);font-size:11.5px;font-weight:400;letter-spacing:.08em;
     text-transform:uppercase;color:var(--violet);display:inline-flex;align-items:center;gap:8px}
   .read .arw{transition:transform .18s ease}
   .card:hover .read .arw{transform:translateX(5px)}
@@ -345,22 +346,6 @@
       </div>
     </a>
 
-    <a class="card" href="https://aworkinglibrary.com/writing/hungrier-than-before">
-      <div class="cover cover-type"><span>“When you eat illusions<br>you end up hungrier<br>than before.”</span></div>
-      <div class="cbody">
-        <h4 class="kw">Hungrier Than Before<span class="zh">〈越吃越餓〉·《地海古墓》讀記</span></h4>
-        <div class="src">A Working Library · Mandy Brown <span class="zhs">· 新加入 · Jul 7 · Reading Note</span></div>
-        <p class="q">"…that's illusion, and when you eat illusions you end up hungrier than before." — Le Guin, quoted in the essay</p>
-        <ul class="qs">
-          <li>巫師能變出大餐，為何不變？</li>
-          <li>「吃幻象只會更餓」——刷 slop 後的空？</li>
-          <li>AI 加速的是創作，還是幻象量產？</li>
-        </ul>
-        <div class="chips"><span class="tg">閱讀</span><span class="tg">AI slop</span><span class="tg">勒瑰恩</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.7</span><span class="kaii">Kaii ★ —</span></div>
-        <span class="read">Read the piece <span class="arw">→</span></span>
-      </div>
-    </a>
 
   </div>
 
