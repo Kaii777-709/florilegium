@@ -79,25 +79,18 @@
   .gloss .hook{color:var(--violet);font-weight:700}
   .qs{margin:10px 0 0;padding:0;list-style:none}
   .qs li{font-family:var(--han);font-size:12.5px;color:var(--txt-2);line-height:1.62;
-    margin:0 0 6px;padding-left:15px;position:relative}
-  .qs li::before{content:"？";position:absolute;left:0;top:0;color:var(--violet);font-weight:700;font-size:11px}
-  .rate{display:flex;align-items:center;gap:4px;margin:12px 0 0;flex-wrap:wrap}
-  .rate b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-3);font-weight:600;margin-right:3px}
-  .rate button{all:unset;cursor:pointer;width:22px;height:22px;border-radius:6px;text-align:center;
-    font-size:10.5px;font-weight:700;color:var(--txt-2);border:1px solid rgba(255,255,255,.14);line-height:22px}
-  .rate button:hover{border-color:var(--violet);color:var(--violet)}
-  .rate button.on{background:rgba(195,176,238,.22);border-color:var(--violet);color:var(--violet)}
-  #exportbar{position:fixed;right:18px;bottom:18px;z-index:9}
-  #exportbar button{all:unset;cursor:pointer;background:#c3b0ee;color:#2f2b47;font-weight:800;
-    font-size:12.5px;letter-spacing:.06em;padding:11px 18px;border-radius:999px;
-    box-shadow:0 4px 18px rgba(0,0,0,.4);font-family:var(--han)}
-  #exportbar button:hover{background:#d5c6f5}
-  .chips{display:flex;flex-wrap:wrap;gap:6px;margin:11px 0 0}
-  .chips .tg{font-size:10.5px;font-family:var(--han);color:var(--txt-2);
-    border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:2px 9px}
-  .chips .sc{font-size:10.5px;font-weight:700;color:var(--violet);font-family:var(--serif);
-    border:1px solid rgba(195,176,238,.4);border-radius:999px;padding:2px 9px}
-  .chips .sc.you{color:var(--txt-2);border-color:rgba(255,255,255,.16)}
+    margin:0 0 7px;padding-left:17px;position:relative}
+  .qs li::before{content:"";position:absolute;left:1px;border-radius:50%}
+  .qs li:nth-child(1)::before{width:7px;height:7px;top:.5em;background:#c3b0ee}
+  .qs li:nth-child(2)::before{width:6px;height:6px;top:.56em;background:#8fb6e2}
+  .qs li:nth-child(3)::before{width:5px;height:5px;top:.62em;background:#e3a6cb}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0}
+  .chips .tg{font-size:11px;font-family:var(--han);font-weight:700;color:#dfd4f7;letter-spacing:.03em;
+    background:rgba(195,176,238,.17);border:1px solid rgba(195,176,238,.42);border-radius:6px;padding:3px 10px}
+  .scores{display:flex;gap:16px;align-items:center;margin:11px 0 0;padding-top:9px;
+    border-top:1px solid rgba(255,255,255,.09);font-family:var(--serif);font-size:11.5px;font-weight:700;letter-spacing:.04em}
+  .scores .claude{color:var(--violet)}
+  .scores .kaii{color:var(--txt-3)}
   .read{margin-top:15px;font-family:var(--display);font-size:12.5px;font-weight:800;letter-spacing:.08em;
     text-transform:uppercase;color:var(--violet);display:inline-flex;align-items:center;gap:8px}
   .read .arw{transition:transform .18s ease}
@@ -151,11 +144,12 @@
         <div class="src">Front Page · The Intrinsic Perspective · Erik Hoel <span class="zhs">· Jul 13 · Free · ❤128</span></div>
         <p class="q">"We consciousness researchers have failed you. We also failed Anthropic."</p>
         <ul class="qs">
-          <li>Anthropic 找到的「全局工作空間」，量的是意識，還是只是「可報告性」？</li>
-          <li>那張漂亮的三段結構圖，為什麼只在 Sonnet 4.5 上出現、換個模型就消失？</li>
-          <li>當「它有沒有意識」的定義由靠它賺錢的公司提供——你信誰的報告？</li>
+          <li>「全局工作空間」量的是意識，還是可報告性？</li>
+          <li>那張三段結構圖，為何換個模型就消失？</li>
+          <li>定義由靠它賺錢的公司給——你信誰？</li>
         </ul>
-        <div class="chips"><span class="tg">意識</span><span class="tg">AI批評</span><span class="tg">論戰</span><span class="sc">Claude ★ 8.8</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">意識</span><span class="tg">AI批評</span><span class="tg">論戰</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.8</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -167,11 +161,12 @@
         <div class="src">The Convivial Society · L. M. Sacasas <span class="zhs">· Jul 8 · Free · ❤80</span></div>
         <p class="q">"In putting a question to a painting, I am also putting a question to another person."</p>
         <ul class="qs">
-          <li>AI slop 為什麼越吃越餓——它缺的那樣東西是什麼？</li>
-          <li>「遇見一幅畫，就是遇見一個人」——那 AI 生成的圖裡，你遇見了誰？</li>
-          <li>沒有會痠的手腕，ChatGPT 為什麼永遠發明不了新書法？</li>
+          <li>AI slop 越吃越餓，它缺的是什麼？</li>
+          <li>AI 生成的圖裡，你遇見了誰？</li>
+          <li>沒有會痠的手腕，能發明新書法嗎？</li>
         </ul>
-        <div class="chips"><span class="tg">技術哲學</span><span class="tg">藝術</span><span class="tg">AI</span><span class="sc">Claude ★ 8.4</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">技術哲學</span><span class="tg">藝術</span><span class="tg">AI</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.4</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -183,11 +178,12 @@
         <div class="src">Emergences Labs <span class="zhs">· 匿名 · Jun 24 · Free</span></div>
         <p class="q">"AI doesn't make your decisions for you. It decides the space of your decisions — and now… preference itself, is being mined."</p>
         <ul class="qs">
-          <li>AI 不替你做決定——那它到底決定了什麼？</li>
-          <li>「偏好」是我們最後的私產嗎？現在正被誰開採？</li>
-          <li>都說判斷力是人類的堡壘——如果機器最擅長學的正是判斷呢？</li>
+          <li>AI 不替你決定，那它決定什麼？</li>
+          <li>偏好是最後的私產嗎？被誰開採？</li>
+          <li>若機器最擅長的正是判斷呢？</li>
         </ul>
-        <div class="chips"><span class="tg">權力</span><span class="tg">偏好</span><span class="tg">哲學</span><span class="sc">Claude ★ 8.6</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">權力</span><span class="tg">偏好</span><span class="tg">哲學</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.6</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -199,11 +195,12 @@
         <div class="src">Hardcore Software · Steven Sinofsky <span class="zhs">· Jul 11 · Free · No.240</span></div>
         <p class="q">"Preemptive regulation is the enemy of progress."</p>
         <ul class="qs">
-          <li>45 年前哈佛法學院禁了 25 磅重的 Osborne 電腦——後來怎麼收場？</li>
-          <li>「預防性監管」為什麼是進步的敵人？表達擔憂能代替證明傷害嗎？</li>
-          <li>AI 原生的一代已經走進法學院——禁令還攔得住什麼？</li>
+          <li>45 年前哈佛禁電腦，後來怎麼收場？</li>
+          <li>預防性監管，為何是進步的敵人？</li>
+          <li>AI 原生世代來了，禁令攔得住嗎？</li>
         </ul>
-        <div class="chips"><span class="tg">科技史</span><span class="tg">教育</span><span class="tg">AI</span><span class="sc">Claude ★ 7.9</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">科技史</span><span class="tg">教育</span><span class="tg">AI</span></div>
+        <div class="scores"><span class="claude">Claude ★ 7.9</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -215,11 +212,12 @@
         <div class="src">Dr. Fei-Fei Li · 李飛飛 <span class="zhs">· Jun 3 · Free · ❤1,416</span></div>
         <p class="q">"The world is everything that is the case." — 維根斯坦</p>
         <ul class="qs">
-          <li>「世界模型」這個詞被用濫了——它到底由哪幾塊功能組成？</li>
-          <li>語言模型學文字的統計結構，世界模型學的是什麼？</li>
-          <li>算繪器、模擬器、規劃器——少了哪一塊就撐不起一個「世界」？</li>
+          <li>「世界模型」到底由哪幾塊組成？</li>
+          <li>語言模型學文字，世界模型學什麼？</li>
+          <li>算繪、模擬、規劃，少一塊行嗎？</li>
         </ul>
-        <div class="chips"><span class="tg">AI</span><span class="tg">宣言</span><span class="tg">空間智能</span><span class="sc">Claude ★ 8.2</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">AI</span><span class="tg">宣言</span><span class="tg">空間智能</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.2</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -231,11 +229,12 @@
         <div class="src">Kneeling Bus · Drew Austin <span class="zhs">· 新加入 · Jun 25 · Paid</span></div>
         <p class="q">"So in other words they are bar themed. This is what bars have always looked like and still do."</p>
         <ul class="qs">
-          <li>七〇年代主題酒吧開遍布魯克林——為什麼說「主題就是酒吧本身」？</li>
-          <li>連酒吧的談話坑都要提前預約——生活裡的偶然性去哪了？</li>
-          <li>排隊是最後的平等主義？在「生活機場化」完成之前。</li>
+          <li>為什麼說「主題就是酒吧本身」？</li>
+          <li>連聊天都要預約，偶然性去哪了？</li>
+          <li>排隊，是最後的平等主義嗎？</li>
         </ul>
-        <div class="chips"><span class="tg">城市</span><span class="tg">懷舊</span><span class="tg">真實</span><span class="sc">Claude ★ 7.6</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">城市</span><span class="tg">懷舊</span><span class="tg">真實</span></div>
+        <div class="scores"><span class="claude">Claude ★ 7.6</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -253,11 +252,12 @@
         <div class="src">Poems Ancient &amp; Modern · Sally Thomas <span class="zhs">· Jul 15 · 今天</span></div>
         <p class="q">"Who says that fictions only and false hair / Become a verse?"</p>
         <ul class="qs">
-          <li>「誰說只有虛構和假髮才配成詩？」——真裡就沒有美嗎？</li>
-          <li>素樸的一句「我的神，我的王」，憑什麼比潺潺溪流更是歌？</li>
-          <li>題材窄到只剩不可言說者，為何反而通向崇高與無限？</li>
+          <li>誰說只有虛構才配成詩？</li>
+          <li>素樸一句，憑什麼比溪流更是歌？</li>
+          <li>題材窄到極致，為何反通向無限？</li>
         </ul>
-        <div class="chips"><span class="tg">詩</span><span class="tg">素樸</span><span class="tg">信仰</span><span class="sc">Claude ★ 8.5</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">詩</span><span class="tg">素樸</span><span class="tg">信仰</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.5</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -269,11 +269,12 @@
         <div class="src">personal canon · Celine Nguyen <span class="zhs">· Jun 6 · Free · ❤245</span></div>
         <p class="q">"One of the minor tragedies I inflicted upon myself, in my early twenties, was to stop reading fiction."</p>
         <ul class="qs">
-          <li>她為什麼在二十出頭把小說戒掉——又為什麼稱之為自己造的小悲劇？</li>
-          <li>「電影也不是真的，你看的時候會想『這沒發生過』嗎？」</li>
-          <li>讀虛構，到底給了「事實的書」給不了的什麼？</li>
+          <li>她為何把小說戒掉，又稱之為悲劇？</li>
+          <li>看電影時，你會想「這沒發生過」嗎？</li>
+          <li>虛構給了事實的書給不了的什麼？</li>
         </ul>
-        <div class="chips"><span class="tg">文學</span><span class="tg">品味</span><span class="tg">自省</span><span class="sc">Claude ★ 8.3</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">文學</span><span class="tg">品味</span><span class="tg">自省</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.3</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -285,11 +286,12 @@
         <div class="src">Escaping Flatland · Henrik Karlsson <span class="zhs">· Jun 22 · Free · ❤975</span></div>
         <p class="q">"…this is important, I must remember this… I actually know this already, it had just somehow slipped my mind."</p>
         <ul class="qs">
-          <li>為什麼最重要的頓悟，總是「早就知道、卻悄悄滑走」？</li>
-          <li>古希臘人的 hypomnemata（自我提醒筆記）是怎麼對抗遺忘的？</li>
-          <li>生活閃亮幾天又暗下去——怎麼讓抓住的真理留在身上？</li>
+          <li>最重要的頓悟，為何總是悄悄滑走？</li>
+          <li>古希臘的自我提醒筆記怎麼對抗遺忘？</li>
+          <li>怎麼讓抓住的真理留在身上？</li>
         </ul>
-        <div class="chips"><span class="tg">筆記術</span><span class="tg">記憶</span><span class="tg">實踐</span><span class="sc">Claude ★ 8.0</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">筆記術</span><span class="tg">記憶</span><span class="tg">實踐</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.0</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -301,11 +303,12 @@
         <div class="src">bookbear express · Ava <span class="zhs">· 新加入 · Jun 24 · 借自 O'Connor</span></div>
         <p class="q">A call in France: "It's not worth it." The words didn't sound like her.</p>
         <ul class="qs">
-          <li>法國那通電話裡的「不值得」，為什麼聽起來不像她自己？</li>
-          <li>佛書說：若你自以為開悟，會來一段關係拆穿你——她信了嗎？</li>
-          <li>「生來就是要感受這一切」——宿命論是逃避，還是誠實？</li>
+          <li>電話裡的「不值得」，為何不像她？</li>
+          <li>「自以為開悟，會有段關係拆穿你」</li>
+          <li>宿命論，是逃避還是誠實？</li>
         </ul>
-        <div class="chips"><span class="tg">隨筆</span><span class="tg">靈魂</span><span class="tg">宿命</span><span class="sc">Claude ★ 7.8</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">隨筆</span><span class="tg">靈魂</span><span class="tg">宿命</span></div>
+        <div class="scores"><span class="claude">Claude ★ 7.8</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -317,11 +320,12 @@
         <div class="src">Noted · Jillian Hess <span class="zhs">· Jul 13 · Free · ❤150</span></div>
         <p class="q">"To build my career I would force myself to do a play. Night work." — Katharine Hepburn</p>
         <ul class="qs">
-          <li>赫本的提詞本裡，藏著什麼樣的工作倫理？</li>
-          <li>「為了事業，我強迫自己演夜戲」——天賦的背後是什麼？</li>
-          <li>一本筆記本，能看出一個人怎麼把角色一遍遍磨出來嗎？</li>
+          <li>赫本的提詞本，藏著什麼工作倫理？</li>
+          <li>「我強迫自己演夜戲」——天賦背後？</li>
+          <li>一本筆記，看得出角色怎麼磨出來？</li>
         </ul>
-        <div class="chips"><span class="tg">筆記考古</span><span class="tg">劇場</span><span class="sc">Claude ★ 7.4</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">筆記考古</span><span class="tg">劇場</span></div>
+        <div class="scores"><span class="claude">Claude ★ 7.4</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -333,11 +337,12 @@
         <div class="src">The Honest Broker · Ted Gioia <span class="zhs">· Jul 12 · Free · ❤296</span></div>
         <p class="q">"I'm sorry not to have got the chance to do it." — Orson Welles, on his unmade Heart of Darkness</p>
         <ul class="qs">
-          <li>我們用代表作評斷藝術家——那一長串失敗作算什麼？</li>
-          <li>威爾斯的《黑暗之心》只差 5 萬美元——電影史差點多了什麼？</li>
-          <li>「很遺憾沒能拍成」——最偉大的作品，是不是都沒被拍出來？</li>
+          <li>只用代表作評斷，失敗作算什麼？</li>
+          <li>只差 5 萬美元，電影史差點多了什麼？</li>
+          <li>最偉大的作品，是不是都沒拍成？</li>
         </ul>
-        <div class="chips"><span class="tg">電影</span><span class="tg">失敗</span><span class="tg">文化批評</span><span class="sc">Claude ★ 7.7</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">電影</span><span class="tg">失敗</span><span class="tg">文化批評</span></div>
+        <div class="scores"><span class="claude">Claude ★ 7.7</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -349,11 +354,12 @@
         <div class="src">A Working Library · Mandy Brown <span class="zhs">· 新加入 · Jul 7 · Reading Note</span></div>
         <p class="q">"…that's illusion, and when you eat illusions you end up hungrier than before." — Le Guin, quoted in the essay</p>
         <ul class="qs">
-          <li>巫師明明能變出金盤大餐——他為什麼不變？</li>
-          <li>「吃幻象只會更餓」——這不正是刷 slop 之後的那種空？</li>
-          <li>AI 加速的到底是創作，還是幻象的量產？</li>
+          <li>巫師能變出大餐，為何不變？</li>
+          <li>「吃幻象只會更餓」——刷 slop 後的空？</li>
+          <li>AI 加速的是創作，還是幻象量產？</li>
         </ul>
-        <div class="chips"><span class="tg">閱讀</span><span class="tg">AI slop</span><span class="tg">勒瑰恩</span><span class="sc">Claude ★ 8.7</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">閱讀</span><span class="tg">AI slop</span><span class="tg">勒瑰恩</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.7</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -371,11 +377,12 @@
         <div class="src">Maxim Zhestkov · 藝術家／導演 <span class="zhs">· Jun 6 · Free</span></div>
         <p class="q">"The best interface is the one you forget… facing a sentient ocean."</p>
         <ul class="qs">
-          <li>最好的介面，為什麼是你會忘記的那一個？</li>
-          <li>「每一道介面的裂縫都是鬧鐘」——沉浸是怎麼被叫醒的？</li>
-          <li>為什麼說造虛擬世界，是今天最難的設計題？</li>
+          <li>最好的介面，為何是你會忘記的？</li>
+          <li>「介面裂縫都是鬧鐘」——沉浸怎麼醒？</li>
+          <li>造虛擬世界，為何是最難的設計題？</li>
         </ul>
-        <div class="chips"><span class="tg">設計</span><span class="tg">沉浸</span><span class="tg">詩性</span><span class="sc">Claude ★ 8.1</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">設計</span><span class="tg">沉浸</span><span class="tg">詩性</span></div>
+        <div class="scores"><span class="claude">Claude ★ 8.1</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -387,11 +394,12 @@
         <div class="src">The Art of Noticing · Rob Walker <span class="zhs">· Jul 14 · Free · 1,099w</span></div>
         <p class="q">"Just fifteen minutes outdoors each day… can be the first stepping stone towards repairing both ourselves and the living world."</p>
         <ul class="qs">
-          <li>一天十五分鐘的戶外，真能同時修復自己和世界嗎？</li>
-          <li>我們是怎麼一步步變得「unwilded（去野化）」的？</li>
-          <li>爬一棵樹、把 Zoom 會議搬到室外——最小的重新野化從哪開始？</li>
+          <li>一天十五分鐘戶外，真能修復什麼？</li>
+          <li>我們是怎麼一步步「去野化」的？</li>
+          <li>最小的「重新野化」，從哪開始？</li>
         </ul>
-        <div class="chips"><span class="tg">注意力</span><span class="tg">戶外</span><span class="tg">練習</span><span class="sc">Claude ★ 7.2</span><span class="sc you">Kaii ★ —</span></div>
+        <div class="chips"><span class="tg">注意力</span><span class="tg">戶外</span><span class="tg">練習</span></div>
+        <div class="scores"><span class="claude">Claude ★ 7.2</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -401,58 +409,6 @@
   <p class="foot">Gathered from sixteen subscriptions · <span class="zh">寧缺勿濫 · 擷其英華</span> · Let curiosity come before certainty.</p>
 
 </div>
-<div id="exportbar"><button id="exp">匯出打分 ↗</button></div>
-<script>
-(function(){
-  var KEY='flori-001-scores';
-  var store={};
-  try{store=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
-  var cards=document.querySelectorAll('a.card');
-  cards.forEach(function(card){
-    var kw=card.querySelector('.kw');
-    if(!kw)return;
-    var title=kw.childNodes[0]?kw.childNodes[0].textContent.trim():kw.textContent.trim();
-    var body=card.querySelector('.cbody');
-    var youChip=card.querySelector('.sc.you');
-    var row=document.createElement('div');
-    row.className='rate';
-    var lab=document.createElement('b');lab.textContent='你的分';row.appendChild(lab);
-    for(var i=1;i<=10;i++){
-      (function(n){
-        var b=document.createElement('button');
-        b.textContent=n;b.type='button';
-        b.addEventListener('click',function(e){
-          e.preventDefault();e.stopPropagation();
-          store[title]=n;
-          try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e2){}
-          paint(row,n);
-          if(youChip)youChip.textContent='Kaii ★ '+n;
-        });
-        row.appendChild(b);
-      })(i);
-    }
-    row.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();});
-    var read=card.querySelector('.read');
-    body.insertBefore(row,read);
-    if(store[title]){paint(row,store[title]);if(youChip)youChip.textContent='Kaii ★ '+store[title];}
-  });
-  function paint(row,n){
-    row.querySelectorAll('button').forEach(function(b){
-      b.classList.toggle('on',parseInt(b.textContent,10)<=n);
-    });
-  }
-  document.getElementById('exp').addEventListener('click',function(){
-    var lines=['Florilegium No.001 打分（貼給 Claude 記入 ledger）：'];
-    var any=false;
-    Object.keys(store).forEach(function(t){lines.push(t+' — '+store[t]);any=true;});
-    if(!any){this.textContent='還沒有打分';var el=this;setTimeout(function(){el.textContent='匯出打分 ↗'},1500);return;}
-    var txt=lines.join('\n');
-    var el=this;
-    function ok(){el.textContent='已複製，貼給 Claude ✓';setTimeout(function(){el.textContent='匯出打分 ↗'},2200);}
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok);}
-    else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);ok();}
-  });
-})();
-</script>
+
 </body>
 </html>
