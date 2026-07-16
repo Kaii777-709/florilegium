@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLORILEGIUM · 擷英 · No.001 · 2026-07-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --txt:#eeecf6; --txt-2:rgba(238,236,246,.66); --txt-3:rgba(238,236,246,.42);
+    --violet:#c3b0ee; --glass:rgba(248,247,253,.06); --glass-edge:rgba(255,255,255,.13);
+    --serif:"Avenir Next","Avenir","Nunito Sans",-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
+    --display:"Avenir Next","Avenir","Nunito Sans",-apple-system,"Segoe UI","Noto Sans TC",sans-serif;
+    --han:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;color:var(--txt);font-family:var(--serif);line-height:1.55;
+    -webkit-font-smoothing:antialiased;padding:44px 22px 80px;
+    background:
+      radial-gradient(circle at 18% 26%,rgba(158,138,222,.30),transparent 30%),
+      radial-gradient(circle at 80% 20%,rgba(120,152,205,.24),transparent 26%),
+      radial-gradient(circle at 66% 82%,rgba(176,140,206,.22),transparent 32%),
+      radial-gradient(circle at 32% 72%,rgba(112,142,186,.20),transparent 30%),
+      linear-gradient(158deg,#2f2b47 0%,#3b4360 52%,#49526e 100%);
+    background-attachment:fixed}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:repeating-linear-gradient(101deg,rgba(210,220,245,.05) 0 1px,transparent 1px 22px),
+      repeating-linear-gradient(96deg,rgba(210,220,245,.03) 0 1px,transparent 1px 38px)}
+  .wrap{position:relative;z-index:1;max-width:1160px;margin:0 auto}
+
+  /* masthead — Brutalist statement: focal = the question, no boxes */
+  .mast{padding:8px 0 32px;margin-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .mast .tag{font-family:var(--serif);font-size:12px;font-weight:600;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--txt-2);margin-bottom:24px}
+  .mast .tag b{color:var(--txt);font-weight:800;letter-spacing:.12em}
+  .mast .tag .zh{font-family:var(--han);font-weight:500;letter-spacing:.06em;font-size:1.2em}
+  .mast h1{font-family:var(--display);font-weight:800;margin:0;line-height:.92;
+    font-size:clamp(42px,8.4vw,96px);letter-spacing:-.02em;text-transform:uppercase}
+  .mast h1 em{font-style:normal;color:var(--violet)}
+  .mast .zh-h{font-family:var(--han);font-weight:700;font-size:clamp(20px,3.1vw,30px);
+    color:var(--txt);margin:20px 0 0;letter-spacing:.02em;line-height:1.5}
+  .mast .strip{margin-top:26px;font-family:var(--serif);font-size:11.5px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--txt-3);display:flex;gap:24px;flex-wrap:wrap}
+
+  /* section label */
+  .sec{display:flex;align-items:center;gap:14px;margin:42px 4px 20px}
+  .sec span{font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
+  .sec span .zh{font-family:var(--han);font-weight:700;letter-spacing:.12em;color:var(--violet);margin-left:8px;font-size:1.05em}
+  .sec::after{content:"";height:1px;flex:1;background:rgba(255,255,255,.12)}
+
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+
+  /* card = whole clickable link */
+  .card{background:var(--glass);backdrop-filter:blur(17px) saturate(135%);-webkit-backdrop-filter:blur(17px) saturate(135%);
+    border:1px solid var(--glass-edge);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+    text-decoration:none;color:var(--txt);cursor:pointer;
+    transition:transform .18s ease,border-color .18s ease,background .18s ease}
+  .card:hover{border-color:rgba(195,176,238,.55);background:rgba(248,247,253,.11);transform:translateY(-3px)}
+  .card:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+  .cover{aspect-ratio:16/10;overflow:hidden;background:rgba(255,255,255,.04)}
+  .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+  .card:hover .cover img{transform:scale(1.045)}
+  .cover-type{display:flex;align-items:center;justify-content:center;text-align:center;
+    background:linear-gradient(150deg,rgba(109,81,163,.34),rgba(63,86,112,.24));padding:16px}
+  .cover-type span{font-family:var(--display);font-weight:800;font-size:clamp(16px,1.9vw,21px);
+    line-height:1.28;color:var(--txt);letter-spacing:-.01em}
+  .cbody{padding:15px 17px 17px;display:flex;flex-direction:column;flex:1}
+  .kw{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.14;margin:0}
+  .kw .zh{font-family:var(--han);font-weight:500;font-size:15.5px;color:var(--txt);display:block;margin-top:4px;line-height:1.45}
+  .src{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--txt-3);margin:9px 0 0}
+  .src .zhs{font-family:var(--han);letter-spacing:.05em}
+  .q{color:var(--violet);font-style:italic;font-size:13.5px;line-height:1.5;margin:11px 0 0}
+  .gloss{font-family:var(--han);color:var(--txt-2);font-size:13.5px;line-height:1.7;margin:10px 0 0}
+  .gloss .hook{color:var(--violet);font-weight:700}
+  .read{margin-top:15px;font-family:var(--display);font-size:12.5px;font-weight:800;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--violet);display:inline-flex;align-items:center;gap:8px}
+  .read .arw{transition:transform .18s ease}
+  .card:hover .read .arw{transform:translateX(5px)}
+
+  /* feature */
+  .feature{grid-column:1/-1;flex-direction:row}
+  .feature .cover{aspect-ratio:auto;flex:0 0 44%;min-height:280px}
+  .feature .cbody{padding:26px 30px}
+  .feature .kw{font-size:28px;font-weight:800}
+  .feature .kw .zh{font-size:17px;margin-top:6px}
+  .feature .q{font-size:16px;margin-top:15px}
+  .feature .gloss{font-size:14.5px}
+  @media(max-width:720px){.feature{flex-direction:column}.feature .cover{flex:auto;aspect-ratio:16/9;min-height:0;width:100%}}
+
+  /* footer strip */
+  .depot{margin-top:40px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  @media(max-width:760px){.depot{grid-template-columns:1fr}}
+  .note{background:var(--glass);backdrop-filter:blur(17px) saturate(135%);-webkit-backdrop-filter:blur(17px) saturate(135%);
+    border:1px solid var(--glass-edge);border-radius:16px;padding:17px 19px}
+  .note h5{font-family:var(--display);font-weight:800;font-size:13px;margin:0 0 6px;letter-spacing:.14em;text-transform:uppercase}
+  .note h5 .zh{font-family:var(--han);color:var(--violet);font-weight:700;letter-spacing:.06em;margin-left:7px;font-size:1.1em}
+  .note p{margin:0;font-size:12.5px;line-height:1.6;color:var(--txt-2)}
+  .note p.en{color:var(--txt);margin-bottom:5px;font-weight:700}
+  .note a{color:var(--violet);text-decoration:none;font-weight:700}
+  .note a:hover{text-decoration:underline}
+
+  .foot{text-align:center;margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);
+    font-family:var(--display);font-style:italic;color:var(--txt-3);font-size:13px}
+  .foot .zh{font-family:var(--han);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="tag"><b>FLORILEGIUM</b> <span class="zh">擷英</span> · No.001</div>
+    <h1>What's Left<br>of the <em>Inner?</em></h1>
+    <div class="zh-h">在 AI 面前，「內在」還剩下什麼——意識、素樸、偏好、靈魂</div>
+    <div class="strip"><span>15 July 2026</span><span>Sixteen Voices</span><span>Curated for KAII</span></div>
+  </header>
+
+  <!-- SECTION I -->
+  <div class="sec"><span>Thought &amp; Technology<span class="zh">思想與技術</span></span></div>
+  <div class="grid">
+
+    <a class="card feature" href="https://www.theintrinsicperspective.com/p/anthropic-runs-like-wile-e-coyote">
+      <div class="cover"><img loading="lazy" alt="Into the Brick Wall — cover" src="https://substackcdn.com/image/fetch/$s_!4Afr!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdddd888b-2014-4c6a-a92a-0ec33a151bc2_1200x630.png"></div>
+      <div class="cbody">
+        <h4 class="kw">Into the Brick Wall of Consciousness<span class="zh">〈Anthropic 一頭撞上意識研究的磚牆〉</span></h4>
+        <div class="src">Front Page · The Intrinsic Perspective · Erik Hoel <span class="zhs">· Jul 13 · Free · ❤128</span></div>
+        <p class="q">"We consciousness researchers have failed you. We also failed Anthropic."</p>
+        <p class="gloss"><span class="hook">他把頭條論文拆穿了。</span>Anthropic 宣稱在 Claude 內部找到「全局工作空間」，Hoel 逐層剝開——量的其實只是「可報告性」；那張漂亮的三段圖只在 Sonnet 4.5 上出現，換模型就消失。而他談的，正是你此刻在對話的這個系統。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://theconvivialsociety.substack.com/p/feeding-on-illusions">
+      <div class="cover"><img loading="lazy" alt="Feeding on Illusions — cover" src="https://substackcdn.com/image/fetch/$s_!R3Cm!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F074c6296-3c12-4a3c-9097-567ac92907be_256x256.png"></div>
+      <div class="cbody">
+        <h4 class="kw">Feeding on Illusions<span class="zh">〈以幻象為食〉</span></h4>
+        <div class="src">The Convivial Society · L. M. Sacasas <span class="zhs">· Jul 8 · Free · ❤80</span></div>
+        <p class="q">"In putting a question to a painting, I am also putting a question to another person."</p>
+        <p class="gloss"><span class="hook">藝術，是一個心靈向世界伸手。</span>Sacasas 接著本期 Mandy Brown 那篇（同引勒瑰恩）續寫：AI「slop」之所以越吃越餓，是因為它不是另一個人「向世界伸手」的創造——遇見一幅畫，本是遇見一個人。文末還帶到一家拒用 AI 的荷蘭字體鑄造廠：ChatGPT 永遠不會發明新書法，因為它沒有會痠的手腕。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://emergenceslabs.substack.com/p/bare-computation-power-judgment-and">
+      <div class="cover"><img loading="lazy" alt="Bare Computation — cover" src="https://substackcdn.com/image/fetch/$s_!lR5W!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03b63f21-2fa3-49f6-8a6c-44fbf06a1874_1200x480.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">Bare Computation<span class="zh">〈裸運算：權力、判斷與偏好〉</span></h4>
+        <div class="src">Emergences Labs <span class="zhs">· 匿名 · Jun 24 · Free</span></div>
+        <p class="q">"AI doesn't make your decisions for you. It decides the space of your decisions — and now… preference itself, is being mined."</p>
+        <p class="gloss"><span class="hook">連偏好都被開採了。</span>AI 不替你做決定，它決定你「能做決定的範圍」。清冷、低頻，每篇必讀的璞玉。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://hardcoresoftware.learningbyshipping.com/p/240-banning-ai-in-law-school-weve">
+      <div class="cover"><img loading="lazy" alt="Banning AI in Law School — cover" src="https://substackcdn.com/image/fetch/$s_!W8EF!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4794521e-65a1-4760-b9f6-a9063144826b_1200x570.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">Banning AI in Law School<span class="zh">〈在法學院禁用 AI：這齣我們見過〉</span></h4>
+        <div class="src">Hardcore Software · Steven Sinofsky <span class="zhs">· Jul 11 · Free · No.240</span></div>
+        <p class="q">"Preemptive regulation is the enemy of progress."</p>
+        <p class="gloss"><span class="hook">這齣戲，歷史演過。</span>芝大法學院以「AI 策略」為名，禁一年級生課堂用手機、筆電。Sinofsky 翻出四十五年前哈佛法學院禁用第一批可攜電腦（那台 25 磅的 Osborne）的舊事——當年的恐慌今天看來荒謬。他說：這代學生是 AI 原生，擋不住，也不該擋。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://drfeifei.substack.com/p/a-functional-taxonomy-of-world-models">
+      <div class="cover"><img loading="lazy" alt="A Taxonomy of World Models — cover" src="https://substackcdn.com/image/fetch/$s_!i95a!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2a1bef9-6c83-4fd9-8a07-4c92402cd499_1766x989.png"></div>
+      <div class="cbody">
+        <h4 class="kw">A Taxonomy of World Models<span class="zh">〈世界模型的功能分類學〉</span></h4>
+        <div class="src">Dr. Fei-Fei Li · 李飛飛 <span class="zhs">· Jun 3 · Free · ❤1,416</span></div>
+        <p class="q">"The world is everything that is the case." — 維根斯坦</p>
+        <p class="gloss"><span class="hook">每篇都是一則宣言。</span>開篇引維根斯坦「世界即一切發生之事」，把世界模型拆成算繪器、模擬器、規劃器。她極罕發文，一發就是綱領。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://kneelingbus.substack.com/p/bots-in-the-beerlight">
+      <div class="cover"><img loading="lazy" alt="Bots in the Beerlight — cover" src="https://substackcdn.com/image/fetch/$s_!9znp!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbcac08c4-e1a3-4a64-8322-84194354337b_1536x1024.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">Bots in the Beerlight<span class="zh">〈啤酒燈裡的機器人〉</span></h4>
+        <div class="src">Kneeling Bus · Drew Austin <span class="zhs">· 新加入 · Jun 25 · Paid</span></div>
+        <p class="q">"So in other words they are bar themed. This is what bars have always looked like and still do."</p>
+        <p class="gloss"><span class="hook">主題酒吧，主題就是酒吧。</span>他從一份專寫紐約酒吧的電子報談起：七〇年代風的布魯克林酒吧，早已跟那個年代脫鉤，成了自成一格、反而很當代的宇宙——一篇關於真實、懷舊與「生活機場化」的漫遊。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- SECTION II -->
+  <div class="sec"><span>Letters &amp; Poetry<span class="zh">文學與詩</span></span></div>
+  <div class="grid">
+
+    <a class="card" href="https://poemsancientandmodern.substack.com/p/todays-poem-jordan-i">
+      <div class="cover"><img loading="lazy" alt="Today's Poem: Jordan (I) — cover" src="https://substackcdn.com/image/fetch/$s_!h5Eb!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd87e013c-2086-420d-a85a-6cd8a4764d68_600x514.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">Today's Poem: Jordan (I)<span class="zh">〈今日之詩：Jordan (I)〉· George Herbert</span></h4>
+        <div class="src">Poems Ancient &amp; Modern · Sally Thomas <span class="zhs">· Jul 15 · 今天</span></div>
+        <p class="q">"Who says that fictions only and false hair / Become a verse?"</p>
+        <p class="gloss"><span class="hook">素樸，也能抵達崇高。</span>赫伯特拒絕辭藻的假髮，老實牧人「平白說出：我的神，我的王」——正撞你望向 infinite 的那條線。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.personalcanon.com/p/i-used-to-think-that-novels-were">
+      <div class="cover"><img loading="lazy" alt="Novels Were a Waste of Time — cover" src="https://substackcdn.com/image/fetch/$s_!BiWF!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F151b0583-8da4-4767-a2ca-4cf295f6b80b_3840x2160.png"></div>
+      <div class="cbody">
+        <h4 class="kw">I Used to Think Novels Were a Waste of Time<span class="zh">〈我曾以為小說是浪費時間〉</span></h4>
+        <div class="src">personal canon · Celine Nguyen <span class="zhs">· Jun 6 · Free · ❤245</span></div>
+        <p class="q">"One of the minor tragedies I inflicted upon myself, in my early twenties, was to stop reading fiction."</p>
+        <p class="gloss"><span class="hook">她曾把小說戒掉。</span>那是二十出頭給自己造的小悲劇。科技底子、文學心臟——八人裡，跟你最像的一個。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.henrikkarlsson.xyz/p/hypomnemata">
+      <div class="cover"><img loading="lazy" alt="How Not to Forget What Matters — cover" src="https://substackcdn.com/image/fetch/$s_!qwvU!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4b71459d-eb9a-4483-b67f-96dfc0e540be_1504x1010.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">How Not to Forget What Matters<span class="zh">〈如何不忘記重要的事〉· hypomnemata</span></h4>
+        <div class="src">Escaping Flatland · Henrik Karlsson <span class="zhs">· Jun 22 · Free · ❤975</span></div>
+        <p class="q">"…this is important, I must remember this… I actually know this already, it had just somehow slipped my mind."</p>
+        <p class="gloss"><span class="hook">你早知道，只是忘了。</span>借古希臘的自我提醒筆記術：那些「我必須記住」的頓悟，其實是你本來就懂、卻悄悄滑走的東西。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.avabear.xyz/p/no-such-thing-as-the-world-becoming">
+      <div class="cover"><img loading="lazy" alt="No Easy Place to Save Your Soul — cover" src="https://substackcdn.com/image/fetch/$s_!adfa!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdd31dc7c-856b-4dcb-a19d-779d635390df_571x725.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">No Easy Place to Save Your Soul<span class="zh">〈世界不會變成容易安放靈魂的地方〉</span></h4>
+        <div class="src">bookbear express · Ava <span class="zhs">· 新加入 · Jun 24 · 借自 O'Connor</span></div>
+        <p class="q">A call in France: "It's not worth it." The words didn't sound like her.</p>
+        <p class="gloss"><span class="hook">那些話，不像她自己。</span>法國的一通電話：「不值得。」佛書、宿命論，每頁壓著一幅畫——在場，卻不急著解決矛盾。你要的 Persona 氣質。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://jillianhess.substack.com/p/katharine-hepburns-promptbook">
+      <div class="cover"><img loading="lazy" alt="Katharine Hepburn's Promptbook — cover" src="https://substackcdn.com/image/fetch/$s_!9DID!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7117ac6d-7293-4f01-8d02-663351ddcf04_1738x1436.png"></div>
+      <div class="cbody">
+        <h4 class="kw">Katharine Hepburn's Promptbook<span class="zh">〈赫本的提詞本〉· 開啟 Notation 系列</span></h4>
+        <div class="src">Noted · Jillian Hess <span class="zhs">· Jul 13 · Free · ❤150</span></div>
+        <p class="q">"To build my career I would force myself to do a play. Night work." — Katharine Hepburn</p>
+        <p class="gloss"><span class="hook">翻開名人的筆記本。</span>新開的「Notations」系列，每篇聚焦一本歷史人物的筆記——首篇是凱瑟琳·赫本的提詞本：她如何在巡演與夜戲裡，把一個角色一遍遍磨出來。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.honest-broker.com/p/the-10-greatest-failures-of-orson">
+      <div class="cover"><img loading="lazy" alt="The 10 Greatest Failures of Orson Welles — cover" src="https://substackcdn.com/image/fetch/$s_!SOWK!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F023fb65f-7f2e-4fb3-bfef-b540ecfc2d8f_1312x772.png"></div>
+      <div class="cbody">
+        <h4 class="kw">The 10 Greatest Failures of Orson Welles<span class="zh">〈奧森·威爾斯的十大失敗作〉</span></h4>
+        <div class="src">The Honest Broker · Ted Gioia <span class="zhs">· Jul 12 · Free · ❤296</span></div>
+        <p class="q">"I'm sorry not to have got the chance to do it." — Orson Welles, on his unmade Heart of Darkness</p>
+        <p class="gloss"><span class="hook">連天才也有一長串失敗。</span>Gioia 細數威爾斯沒能拍成的計畫——從他第一份好萊塢合約本要拍、卻因差 5 萬美元預算而告吹的《黑暗之心》說起。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://aworkinglibrary.com/writing/hungrier-than-before">
+      <div class="cover cover-type"><span>“When you eat illusions<br>you end up hungrier<br>than before.”</span></div>
+      <div class="cbody">
+        <h4 class="kw">Hungrier Than Before<span class="zh">〈越吃越餓〉·《地海古墓》讀記</span></h4>
+        <div class="src">A Working Library · Mandy Brown <span class="zhs">· 新加入 · Jul 7 · Reading Note</span></div>
+        <p class="q">"…that's illusion, and when you eat illusions you end up hungrier than before." — Le Guin, quoted in the essay</p>
+        <p class="gloss"><span class="hook">吃幻象，只會更餓。</span>Mandy Brown 借勒瑰恩《地海古墓》裡巫師格得的話：魔法變出的金盤大餐終究是幻象——一刀刺向 AI 與無魂的商業內容。你以為吃飽了，其實一直在挨餓。與本期 Sacasas〈以幻象為食〉遙相呼應。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- SECTION III -->
+  <div class="sec"><span>Art &amp; Attention<span class="zh">藝術與注意</span></span></div>
+  <div class="grid">
+
+    <a class="card" href="https://zhestkov.substack.com/p/spatial-feel">
+      <div class="cover"><img loading="lazy" alt="Spatial Feel — cover" src="https://substackcdn.com/image/fetch/$s_!H4KX!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c547c90-309c-4c5d-9c42-13609f796155_1920x1080.png"></div>
+      <div class="cbody">
+        <h4 class="kw">Spatial Feel<span class="zh">〈空間感〉</span></h4>
+        <div class="src">Maxim Zhestkov · 藝術家／導演 <span class="zhs">· Jun 6 · Free</span></div>
+        <p class="q">"The best interface is the one you forget… facing a sentient ocean."</p>
+        <p class="gloss"><span class="hook">最好的介面，你會忘記它。</span>他拿字體當比喻談空間感；前一篇〈留在森林裡〉更詩——螢火蟲回家在燈下變成醜黑蟲，那一撞。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://robwalker.substack.com/p/natural-timing">
+      <div class="cover"><img loading="lazy" alt="Natural Timing — cover" src="https://substackcdn.com/image/fetch/$s_!LKA_!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F78d2a976-cde2-4738-b3c6-d5f3bf069e5b_4032x3024.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">Natural Timing<span class="zh">〈自然的時機〉· TAoN No.214</span></h4>
+        <div class="src">The Art of Noticing · Rob Walker <span class="zhs">· Jul 14 · Free · 1,099w</span></div>
+        <p class="q">"Just fifteen minutes outdoors each day… can be the first stepping stone towards repairing both ourselves and the living world."</p>
+        <p class="gloss"><span class="hook">一天十五分鐘，走到戶外。</span>出自新書《Unwilded》的挑戰——每天到戶外十五分鐘、開始留心與在乎，就是修復自己與這個世界的第一塊踏腳石。</p>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- FOOTER STRIP -->
+  <div class="depot">
+    <div class="note">
+      <h5>Coming Soon <span class="zh">保險欄</span></h5>
+      <p class="en">Andrej's Substack · Karpathy</p>
+      <p>建號三年，唯一一篇是三個字的 <a href="https://karpathy.substack.com/">"This is Andrej's Substack."</a> 留著，只為他哪天真的動筆。</p>
+    </div>
+    <div class="note">
+      <h5>Wanted <span class="zh">徵求</span></h5>
+      <p class="en">Art × Death</p>
+      <p>Morbid Anatomy 的 Substack 已停更、無公開 feed——那一格，跟你最同源的凝視，暫時空著。徵一個真在寫的替代。</p>
+    </div>
+    <div class="note">
+      <h5>Delivery <span class="zh">出刊</span></h5>
+      <p class="en">Mon &amp; Thu · 9:00 AM</p>
+      <p>排程每週一、四早上九點自動生成；下次 7/16 週四。（cron 0 9 * * 1,4；介面「only on Monday」是舊 bug，cron 本身正確。）</p>
+    </div>
+  </div>
+
+  <p class="foot">Gathered from sixteen subscriptions · <span class="zh">寧缺勿濫 · 擷其英華</span> · Let curiosity come before certainty.</p>
+
+</div>
+</body>
+</html>
