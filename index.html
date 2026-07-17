@@ -51,14 +51,21 @@
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
   @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){
-    body{padding:32px 20px 70px}
-    .grid{grid-template-columns:1fr;gap:58px}
-    .sec{margin:68px 4px 26px}
-    .mast{margin-bottom:60px;padding-bottom:40px}
-    .depot{gap:34px;margin-top:60px}
-    .cbody{padding:20px 20px 24px}
-    .feature .cbody{padding:24px 22px}
-    .foot{margin-top:54px}
+    body{padding:40px 22px 88px}
+    .grid{grid-template-columns:1fr;gap:84px}
+    .sec{margin:100px 4px 34px}
+    .mast{margin-bottom:80px;padding-bottom:48px}
+    .mast .zh-h{margin-top:26px}
+    .mast .strip{margin-top:34px}
+    .depot{gap:48px;margin-top:88px}
+    .cbody{padding:24px 22px 28px}
+    .feature .cbody{padding:28px 24px}
+    .kw{margin-top:2px}
+    .qs{margin-top:14px}
+    .chips{margin-top:16px}
+    .scores{margin-top:15px}
+    .read{margin-top:19px}
+    .foot{margin-top:76px}
   }
 
   /* card = whole clickable link */
@@ -69,8 +76,8 @@
   .card:hover{border-color:rgba(178,190,218,.52);background:rgba(244,247,253,.10);transform:translateY(-3px)}
   .card:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
   .cover{aspect-ratio:16/10;overflow:hidden;background:rgba(255,255,255,.04)}
-  .cover img{width:100%;height:100%;object-fit:cover;display:block;opacity:.68;filter:saturate(.96) brightness(.97);transition:transform .6s cubic-bezier(.22,.9,.3,1),filter .6s ease,opacity .5s ease}
-  .card:hover .cover img{transform:scale(1.035);opacity:1;filter:saturate(1.05) brightness(1.04)}
+  .cover img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.96) url(#whitefade);transition:transform .6s cubic-bezier(.22,.9,.3,1),filter .6s ease,opacity .5s ease}
+  .card:hover .cover img{transform:scale(1.035);filter:saturate(1.02) url(#whitefade)}
   .cover-type{display:flex;align-items:center;justify-content:center;text-align:center;
     background:linear-gradient(150deg,rgba(70,86,120,.28),rgba(46,62,92,.20));padding:16px}
   .cover-type span{font-family:var(--display);font-weight:800;font-size:clamp(16px,1.9vw,21px);
@@ -142,13 +149,14 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="whitefade" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -0.28 -0.52 -0.12 1 0.2"/></filter></svg>
 <div class="wrap">
 
   <header class="mast">
     <div class="tag"><b>LUNARIA</b> <span class="zh">月之反射</span> · No.001</div>
     <h1>What's Left<br>of the <em>Inner?</em></h1>
     <div class="zh-h">在 AI 面前，「內在」還剩下什麼——意識、素樸、偏好、靈魂</div>
-    <div class="strip"><span>15 July 2026</span><span>12 pieces</span><span>Curated by KAII</span></div>
+    <div class="strip"><span>15 July 2026</span><span>12</span><span>Curated by KAII</span></div>
   </header>
 
   <!-- SECTION I -->
@@ -377,7 +385,7 @@
 
   </div>
 
-  <p class="foot"><span class="zh">寧缺勿濫 · 月映千川</span> · Fewer, but finer.</p>
+  <p class="foot"><span class="zh">寧缺勿濫 · 月映千川</span></p>
 
 </div>
 
