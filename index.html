@@ -6,14 +6,16 @@
 <title>LUNARIA · 月之反射 · No.001 · 2026-07-15</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&family=LXGW+WenKai+TC:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
+  @font-face{font-family:"BlueScreen";src:url('font-title.ttf') format('truetype');font-display:swap}
+  @font-face{font-family:"RainyHearts";src:url('font-en.ttf') format('truetype');font-display:swap}
   :root{
     --txt:#eeecf6; --txt-2:rgba(238,236,246,.66); --txt-3:rgba(238,236,246,.42);
     --violet:#c3b0ee; --glass:rgba(248,247,253,.06); --glass-edge:rgba(255,255,255,.13);
     --serif:"Avenir Next","Avenir",-apple-system,"Segoe UI","LXGW WenKai TC",sans-serif;
-    --display:"Pixelify Sans","Avenir Next",-apple-system,sans-serif;
-    --pixel:"Silkscreen","Pixelify Sans",monospace;
+    --display:"BlueScreen","Avenir Next",-apple-system,sans-serif;
+    --pixel:"RainyHearts","BlueScreen",monospace;
     --han:"LXGW WenKai TC","PingFang TC","Microsoft JhengHei",sans-serif;
   }
   *{box-sizing:border-box}
@@ -25,7 +27,7 @@
 
   /* masthead — Brutalist statement: focal = the question, no boxes */
   .mast{padding:8px 0 32px;margin-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
-  .mast .tag{font-family:var(--pixel);font-size:11px;font-weight:400;letter-spacing:.16em;
+  .mast .tag{font-family:var(--pixel);font-size:13px;font-weight:400;letter-spacing:.16em;
     text-transform:uppercase;color:var(--txt-2);margin-bottom:24px}
   .mast .tag b{color:var(--txt);font-weight:800;letter-spacing:.12em}
   .mast .tag .zh{font-family:var(--han);font-weight:500;letter-spacing:.06em;font-size:1.2em}
@@ -33,22 +35,15 @@
     font-size:clamp(38px,7.6vw,84px);letter-spacing:0;text-transform:uppercase;
     background:linear-gradient(168deg,#f2effb 0%,#cfc4ec 55%,#a99ad8 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent}
-  .mast h1 em{font-style:normal;background:linear-gradient(100deg,#c3b0ee 0%,#e8ddff 42%,#9f86e0 60%,#c3b0ee 100%);
-    background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
-    animation:moonsheen 9s ease-in-out infinite}
-  @keyframes moonsheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+  .mast h1 em{font-style:normal;color:var(--violet)}
   .mast .zh-h{font-family:var(--han);font-weight:700;font-size:clamp(20px,3.1vw,30px);
     color:var(--txt);margin:20px 0 0;letter-spacing:.02em;line-height:1.5}
-  .mast .strip{margin-top:26px;font-family:var(--pixel);font-size:11px;font-weight:400;
+  .mast .strip{margin-top:26px;font-family:var(--pixel);font-size:13px;font-weight:400;
     letter-spacing:.14em;text-transform:uppercase;color:var(--txt-3);display:flex;gap:24px;flex-wrap:wrap}
 
-  .mast .tag,.mast h1,.mast .zh-h,.mast .strip{opacity:0;transform:translateY(14px);
-    animation:rise .9s cubic-bezier(.22,.9,.3,1) forwards}
-  .mast h1{animation-delay:.08s}.mast .zh-h{animation-delay:.2s}.mast .strip{animation-delay:.34s}
-  @keyframes rise{to{opacity:1;transform:none}}
   /* section label */
   .sec{display:flex;align-items:center;gap:14px;margin:42px 4px 20px}
-  .sec span{font-family:var(--pixel);font-size:12px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
+  .sec span{font-family:var(--pixel);font-size:13px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
   .sec span .zh{font-family:var(--han);font-weight:700;letter-spacing:.12em;color:var(--violet);margin-left:8px;font-size:1.05em}
   .sec::after{content:"";height:1px;flex:1;background:rgba(255,255,255,.12)}
 
@@ -74,7 +69,7 @@
   .cbody{padding:15px 17px 17px;display:flex;flex-direction:column;flex:1}
   .kw{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.14;margin:0}
   .kw .zh{font-family:var(--han);font-weight:700;font-size:16px;color:var(--txt);display:block;margin-top:4px;line-height:1.45}
-  .src{font-family:var(--pixel);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt-3);margin:9px 0 0}
+  .src{font-family:var(--pixel);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt-3);margin:9px 0 0}
   .src .zhs{font-family:var(--han);letter-spacing:.05em}
   .q{color:var(--violet);font-style:italic;font-size:13.5px;line-height:1.5;margin:11px 0 0}
   .gloss{font-family:var(--han);color:var(--txt-2);font-size:14px;line-height:1.7;margin:10px 0 0}
@@ -98,7 +93,8 @@
     border-top:1px solid rgba(255,255,255,.09);font-family:var(--serif);font-size:11.5px;font-weight:700;letter-spacing:.04em}
   .scores .claude{color:var(--violet)}
   .scores .kaii{color:var(--txt-3)}
-  .read{margin-top:15px;font-family:var(--pixel);font-size:11.5px;font-weight:400;letter-spacing:.08em;
+  .scores .kaii.on{color:#e8ddff}
+  .read{margin-top:15px;font-family:var(--pixel);font-size:13px;font-weight:400;letter-spacing:.08em;
     text-transform:uppercase;color:var(--violet);display:inline-flex;align-items:center;gap:8px}
   .read .arw{transition:transform .18s ease}
   .card:hover .read .arw{transform:translateX(5px)}
@@ -132,8 +128,6 @@
     font-family:var(--display);font-style:italic;color:var(--txt-3);font-size:13px}
   .foot .zh{font-family:var(--han);font-style:normal}
   @media (prefers-reduced-motion:reduce){
-    .mast .tag,.mast h1,.mast .zh-h,.mast .strip{animation:none;opacity:1;transform:none}
-    .mast h1 em{animation:none}
     .card,.note{opacity:1;transform:none;transition:border-color .18s ease,background .18s ease}
   }
 </style>
@@ -152,7 +146,24 @@
   <div class="sec"><span>Thought &amp; Technology<span class="zh">思想與技術</span></span></div>
   <div class="grid">
 
-    <a class="card feature" href="https://www.theintrinsicperspective.com/p/anthropic-runs-like-wile-e-coyote">
+    <a class="card feature" href="https://emergenceslabs.substack.com/p/bare-computation-power-judgment-and">
+      <div class="cover"><img loading="lazy" alt="Bare Computation — cover" src="https://substackcdn.com/image/fetch/$s_!lR5W!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03b63f21-2fa3-49f6-8a6c-44fbf06a1874_1200x480.jpeg"></div>
+      <div class="cbody">
+        <h4 class="kw">Bare Computation<span class="zh">〈裸運算：權力、判斷與偏好〉</span></h4>
+        <div class="src">Emergences Labs <span class="zhs">· 匿名 · Jun 24</span></div>
+        <p class="q">"AI doesn't make your decisions for you. It decides the space of your decisions — and now… preference itself, is being mined."</p>
+        <ul class="qs">
+          <li>AI 不替你決定，那它決定什麼？</li>
+          <li>偏好是最後的私產嗎？被誰開採？</li>
+          <li>若機器最擅長的正是判斷呢？</li>
+        </ul>
+        <div class="chips"><span class="tg">權力</span><span class="tg">偏好</span><span class="tg">哲學</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.3</span><span class="kaii on">Kaii ★ 4.3</span></div>
+        <span class="read">Read the piece <span class="arw">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.theintrinsicperspective.com/p/anthropic-runs-like-wile-e-coyote">
       <div class="cover"><img loading="lazy" alt="Into the Brick Wall — cover" src="https://substackcdn.com/image/fetch/$s_!4Afr!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdddd888b-2014-4c6a-a92a-0ec33a151bc2_1200x630.png"></div>
       <div class="cbody">
         <h4 class="kw">Into the Brick Wall of Consciousness<span class="zh">〈Anthropic 一頭撞上意識研究的磚牆〉</span></h4>
@@ -164,7 +175,7 @@
           <li>定義由靠它賺錢的公司給——你信誰？</li>
         </ul>
         <div class="chips"><span class="tg">意識</span><span class="tg">AI批評</span><span class="tg">論戰</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.8</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.4</span><span class="kaii on">Kaii ★ 3.8</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -181,27 +192,11 @@
           <li>沒有會痠的手腕，能發明新書法嗎？</li>
         </ul>
         <div class="chips"><span class="tg">技術哲學</span><span class="tg">藝術</span><span class="tg">AI</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.4</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.2</span><span class="kaii on">Kaii ★ 3.5</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
 
-    <a class="card" href="https://emergenceslabs.substack.com/p/bare-computation-power-judgment-and">
-      <div class="cover"><img loading="lazy" alt="Bare Computation — cover" src="https://substackcdn.com/image/fetch/$s_!lR5W!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03b63f21-2fa3-49f6-8a6c-44fbf06a1874_1200x480.jpeg"></div>
-      <div class="cbody">
-        <h4 class="kw">Bare Computation<span class="zh">〈裸運算：權力、判斷與偏好〉</span></h4>
-        <div class="src">Emergences Labs <span class="zhs">· 匿名 · Jun 24</span></div>
-        <p class="q">"AI doesn't make your decisions for you. It decides the space of your decisions — and now… preference itself, is being mined."</p>
-        <ul class="qs">
-          <li>AI 不替你決定，那它決定什麼？</li>
-          <li>偏好是最後的私產嗎？被誰開採？</li>
-          <li>若機器最擅長的正是判斷呢？</li>
-        </ul>
-        <div class="chips"><span class="tg">權力</span><span class="tg">偏好</span><span class="tg">哲學</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.6</span><span class="kaii">Kaii ★ —</span></div>
-        <span class="read">Read the piece <span class="arw">→</span></span>
-      </div>
-    </a>
 
     <a class="card" href="https://hardcoresoftware.learningbyshipping.com/p/240-banning-ai-in-law-school-weve">
       <div class="cover"><img loading="lazy" alt="Banning AI in Law School — cover" src="https://substackcdn.com/image/fetch/$s_!W8EF!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4794521e-65a1-4760-b9f6-a9063144826b_1200x570.jpeg"></div>
@@ -215,27 +210,11 @@
           <li>AI 原生世代來了，禁令攔得住嗎？</li>
         </ul>
         <div class="chips"><span class="tg">科技史</span><span class="tg">教育</span><span class="tg">AI</span></div>
-        <div class="scores"><span class="claude">Claude ★ 7.9</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.0</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
 
-    <a class="card" href="https://drfeifei.substack.com/p/a-functional-taxonomy-of-world-models">
-      <div class="cover"><img loading="lazy" alt="A Taxonomy of World Models — cover" src="https://substackcdn.com/image/fetch/$s_!i95a!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2a1bef9-6c83-4fd9-8a07-4c92402cd499_1766x989.png"></div>
-      <div class="cbody">
-        <h4 class="kw">A Taxonomy of World Models<span class="zh">〈世界模型的功能分類學〉</span></h4>
-        <div class="src">Dr. Fei-Fei Li · 李飛飛 <span class="zhs">· Jun 3</span></div>
-        <p class="q">"The world is everything that is the case." — 維根斯坦</p>
-        <ul class="qs">
-          <li>「世界模型」到底由哪幾塊組成？</li>
-          <li>語言模型學文字，世界模型學什麼？</li>
-          <li>算繪、模擬、規劃，少一塊行嗎？</li>
-        </ul>
-        <div class="chips"><span class="tg">AI</span><span class="tg">宣言</span><span class="tg">空間智能</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.2</span><span class="kaii">Kaii ★ —</span></div>
-        <span class="read">Read the piece <span class="arw">→</span></span>
-      </div>
-    </a>
 
 
   </div>
@@ -256,7 +235,7 @@
           <li>題材窄到極致，為何反通向無限？</li>
         </ul>
         <div class="chips"><span class="tg">詩</span><span class="tg">素樸</span><span class="tg">信仰</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.5</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.3</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -273,7 +252,7 @@
           <li>虛構給了事實的書給不了的什麼？</li>
         </ul>
         <div class="chips"><span class="tg">文學</span><span class="tg">品味</span><span class="tg">自省</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.3</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.2</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -290,7 +269,7 @@
           <li>怎麼讓抓住的真理留在身上？</li>
         </ul>
         <div class="chips"><span class="tg">筆記術</span><span class="tg">記憶</span><span class="tg">實踐</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.0</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.0</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -307,7 +286,7 @@
           <li>宿命論，是逃避還是誠實？</li>
         </ul>
         <div class="chips"><span class="tg">隨筆</span><span class="tg">靈魂</span><span class="tg">宿命</span></div>
-        <div class="scores"><span class="claude">Claude ★ 7.8</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 3.9</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -324,7 +303,7 @@
           <li>一本筆記，看得出角色怎麼磨出來？</li>
         </ul>
         <div class="chips"><span class="tg">筆記考古</span><span class="tg">劇場</span></div>
-        <div class="scores"><span class="claude">Claude ★ 7.4</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 3.7</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -341,7 +320,7 @@
           <li>最偉大的作品，是不是都沒拍成？</li>
         </ul>
         <div class="chips"><span class="tg">電影</span><span class="tg">失敗</span><span class="tg">文化批評</span></div>
-        <div class="scores"><span class="claude">Claude ★ 7.7</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 3.9</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -365,7 +344,7 @@
           <li>造虛擬世界，為何是最難的設計題？</li>
         </ul>
         <div class="chips"><span class="tg">設計</span><span class="tg">沉浸</span><span class="tg">詩性</span></div>
-        <div class="scores"><span class="claude">Claude ★ 8.1</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 4.1</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
@@ -382,7 +361,7 @@
           <li>最小的「重新野化」，從哪開始？</li>
         </ul>
         <div class="chips"><span class="tg">注意力</span><span class="tg">戶外</span><span class="tg">練習</span></div>
-        <div class="scores"><span class="claude">Claude ★ 7.2</span><span class="kaii">Kaii ★ —</span></div>
+        <div class="scores"><span class="claude">Claude ★ 3.6</span><span class="kaii">Kaii ★ —</span></div>
         <span class="read">Read the piece <span class="arw">→</span></span>
       </div>
     </a>
