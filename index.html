@@ -26,12 +26,13 @@
 
   /* masthead — Brutalist statement: focal = the question, no boxes */
   .mast{padding:8px 0 32px;margin-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
-  .mast .tag{font-family:var(--pixel);font-size:12px;font-weight:800;letter-spacing:.16em;
+  .mast .tag{font-family:var(--pixel);font-size:11px;font-weight:800;transform:scaleX(1.16);transform-origin:left;display:inline-block;letter-spacing:.16em;
     text-transform:uppercase;color:var(--txt-2);margin-bottom:24px}
   .mast .tag b{color:var(--txt);font-weight:800;letter-spacing:.12em}
   .mast .tag .zh{font-family:var(--han);font-weight:500;letter-spacing:.06em;font-size:1.2em}
-  .mast h1{-webkit-font-smoothing:none;font-family:var(--display);font-weight:800;margin:0;line-height:.92;
-    font-family:var(--glow);font-size:clamp(36px,7vw,78px);letter-spacing:.02em;text-transform:uppercase;line-height:1.1;
+  .mast h1{-webkit-font-smoothing:none;font-weight:800;margin:0;
+    font-family:var(--glow);font-size:clamp(28px,5.2vw,58px);letter-spacing:0;text-transform:uppercase;line-height:1.42;
+    transform:scaleX(1.42);transform-origin:left center;width:70%;
     background:linear-gradient(168deg,#f2effb 0%,#cfc4ec 55%,#a99ad8 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent}
   .mast h1 em{font-style:normal;color:var(--violet)}
@@ -42,7 +43,7 @@
 
   /* section label */
   .sec{display:flex;align-items:center;gap:14px;margin:42px 4px 20px}
-  .sec span{font-family:var(--pixel);font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
+  .sec span{font-family:var(--pixel);font-size:12px;font-weight:800;transform:scaleX(1.12);transform-origin:left;display:inline-block;letter-spacing:.2em;text-transform:uppercase;color:var(--txt-2);white-space:nowrap}
   .sec span .zh{font-family:var(--han);font-weight:700;letter-spacing:.12em;color:var(--violet);margin-left:8px;font-size:1.05em}
   .sec::after{content:"";height:1px;flex:1;background:rgba(255,255,255,.12)}
 
@@ -380,6 +381,4 @@
   },{rootMargin:'0px 0px -8% 0px',threshold:.06});
   els.forEach(function(e,i){e.style.transitionDelay=(i%3)*70+'ms';io.observe(e);});
 })();
-</script>
-</body>
-</html>
+</s
